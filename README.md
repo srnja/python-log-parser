@@ -1,39 +1,34 @@
-# python-log-parser
+Python Log Parser & Data Validation
 
-A modular Python application that parses raw system logs into structured records, validates input data, and stores processed information in a relational SQLite database.
+A Python application that parses Apache-style server logs, validates records, and stores structured data in a SQLite database.
 
-Project Overview
-This project demonstrates Python programming, regular expressions, data validation, SQL database management, memory-efficient file processing, and automated testing.
-
-The application processes Apache-style server access logs line by line, extracts important information, validates records, and stores valid entries in SQLite.
-
-Features:
-
-Log Parsing: Extracts IP addresses, timestamps, HTTP methods, endpoints, status codes, and request metadata.
-
-Memory-Efficient Processing: Processes large log files line by line without loading the entire file into memory.
-
-Data Validation: Validates IP addresses, timestamps, required fields, and HTTP status codes.
-
-SQLite Integration: Stores structured log records in a relational database.
-
-SQL Queries: Supports filtering by IP address and HTTP status code, retrieving records, and summarizing HTTP responses.
-
-Error Handling: Skips malformed log entries while tracking invalid records.
-
-Automated Testing: Uses pytest to test parsing, validation, and database functionality.
-
-Technologies Used:
-
-Python 3
-
+Features
+Parses raw server logs using regular expressions.
+Validates IP addresses, timestamps, and HTTP status codes.
+Stores processed records in SQLite.
+Supports SQL queries and HTTP status summaries.
+Handles malformed log entries.
+Includes automated tests using pytest.
+Technologies
+Python
 SQLite
-
 SQL
-
 Regular Expressions
-
 Pytest
+How to Run
+Clone the repository.
+Install dependencies:
 
-Git and GitHub
+pip install -r requirements.txt
 
+Run the application:
+
+python main.py sample_logs/access.log
+
+Run Tests
+
+pytest -v
+
+Project Purpose
+
+Built to demonstrate Python programming, data validation, database management, file processing, and software testing.
