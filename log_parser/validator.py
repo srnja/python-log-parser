@@ -12,14 +12,24 @@ def validate_ip(ip_address):
 
 
 def validate_timestamp(timestamp):
-    """Validate Apache-style timestamps."""
+    """Validate Apache and ISO-formatted timestamps."""
+
+    if not isinstance(timestamp, str):
+        return False
+
     try:
         datetime.strptime(
             timestamp,
             "%d/%b/%Y:%H:%M:%S %z"
         )
         return True
-    except (ValueError, TypeError):
+    except ValueError:
+        pass
+
+    try:
+        datetime.fromisoformat(timestamp)
+        return True
+    except ValueError:
         return False
 
 
