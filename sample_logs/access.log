@@ -1,0 +1,6 @@
+192.168.1.10 - - [15/Oct/2025:10:30:45 +0000] "GET /index.html HTTP/1.1" 200 1024 "https://example.com" "Mozilla/5.0"
+192.168.1.11 - - [15/Oct/2025:10:31:12 +0000] "POST /login HTTP/1.1" 401 512 "-" "Chrome/120.0"
+10.0.0.5 - - [15/Oct/2025:10:32:20 +0000] "GET /dashboard HTTP/1.1" 200 2048 "-" "Firefox/115.0"
+172.16.0.2 - - [15/Oct/2025:10:33:05 +0000] "GET /admin HTTP/1.1" 403 256 "-" "Mozilla/5.0"
+invalid log entry
+192.168.1.15 - - [15/Oct/2025:10:35:00 +0000] "GET /about HTTP/1.1" 404 128 "-" "Safari/17.0"
